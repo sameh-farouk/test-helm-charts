@@ -12,4 +12,4 @@ Add the Repository to Helm:
 
 Install Application 1:
 
-    helm install my-helm-charts/peertube
+    helm install test-helm-charts/peertube
