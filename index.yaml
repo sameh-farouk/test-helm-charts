@@ -1,0 +1,35 @@
+apiVersion: v1
+entries:
+  peertube:
+  - apiVersion: v2
+    appVersion: production-stretch
+    created: "2021-07-18T16:57:28.947885401+02:00"
+    dependencies:
+    - condition: deps.pg.managed
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 10.0.0
+    - condition: deps.redis.managed
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.0.1
+    description: Federated (ActivityPub) video streaming platform using P2P (BitTorrent)
+      directly in the web browser with WebTorrent.
+    digest: d300283ff5cfee44b5e8ee229cc308ed59c0637c3f10d14a6f397e08e8926d8c
+    home: https://joinpeertube.org/
+    icon: https://joinpeertube.org/favicon.png
+    keywords:
+    - peertube
+    - video
+    - streaming
+    - p2p
+    maintainers:
+    - name: Amit Kumar Gupta (Original owner)
+      url: https://akgupta.ca
+    name: peertube
+    sources:
+    - https://github.com/Chocobozzz/PeerTube
+    urls:
+    - https://github.com/sameh-farouk/test-helm-charts/releases/download/peertube-0.0.1/peertube-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-07-18T16:57:28.947892177+02:00"
