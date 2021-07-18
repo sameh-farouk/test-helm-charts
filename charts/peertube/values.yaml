@@ -1,0 +1,75 @@
+image:
+  repository: threefolddev/tf-peertube 
+  tag: tfconnect
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8084 # PeerTube => P T => 80 84
+
+pvc:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 4Gi
+
+deps:
+  pg:
+    managed: true
+  redis:
+    managed: true
+  smtp:
+    username: omar.elawady.alternative@gmail.com
+    from: omar.elawady.alternative@gmail.com
+    password: password
+    hostname: smtp.gmail.com
+    port: 465
+    tls:
+      enabled: true
+
+postgresql:
+  fullnameOverride: peertube-postgresql-1531009616
+  postgresqlDatabase: peertube
+  persistence:
+          enabled: false
+redis:
+  fullnameOverride: peertube-redis-1531009616
+  usePassword: false
+  cluster:
+    enabled: false
+  master:
+    persistence:
+      enabled: false
+    resources:
+      limits:
+        cpu: 100m
+        memory: 256Mi
+      requests:
+        cpu: 100m
+        memory: 256Mi
+
+global:
+  ingress:
+    certresolver: default
+
+ingress:
+  tls:
+    enabled: true
+    existingSecret: True
+
+adminEmail: adminemail@gmail.com
+adminPass: adminPassword
+
+webserver:
+        hostname: peertubek8s.tfgw-testnet-01.gateway.tf
+
+resources:
+  limits:
+    cpu: 650m
+    memory: 512Mi
+  requests:
+    cpu: 650m
+    memory: 512Mi
+
+
+threefoldVdc:
+  backup: ''

@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "peertube.fullName" . }}
+  labels:
+    app: {{ template "peertube.fullName" . }}
+    chart: {{ template "peertube.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    backupType: {{ .Values.threefoldVdc.backup | quote }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: svc2pod
+      protocol: TCP
+      name: ing2svc
+      {{ if and (eq "NodePort" .Values.service.type) .Values.service.nodePort }}
+      nodePort: {{ .Values.service.nodePort}}
+      {{ end }}
+  selector:
+    {{- include "peertube.selectorLabels" . | nindent 4 }}
