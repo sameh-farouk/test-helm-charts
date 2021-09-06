@@ -63,4 +63,16 @@ entries:
     urls:
     - https://github.com/sameh-farouk/test-helm-charts/releases/download/peertube-0.0.1/peertube-0.0.1.tgz
     version: 0.0.1
-generated: "2021-07-18T19:37:59.890428017+02:00"
+  taiga:
+  - apiVersion: v1
+    appVersion: 6.0.6
+    created: "2021-09-06T14:17:10.118741231+02:00"
+    description: A Taiga Helm Chart generated for docker-compose from Skippbox Kompose
+    digest: 47204a4c3d4d68c6c1918e19c3d7f26ee1331011a7dbd191142081d64a6a0795
+    keywords:
+    - taiga
+    name: taiga
+    urls:
+    - https://github.com/sameh-farouk/test-helm-charts/releases/download/taiga-0.0.1/taiga-0.0.1.tgz
+    version: 0.0.1
+generated: "2021-09-06T14:17:10.118748856+02:00"
