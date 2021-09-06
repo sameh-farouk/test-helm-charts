@@ -1,0 +1,17 @@
+{{- $backup := .Values.threefoldVdc.backup -}}
+{{- range $key, $value := .Values.services }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $value.name }}
+  labels:
+    backupType: {{ $backup | quote }}
+    io.kompose.service: {{ $value.name }}
+spec:
+  ports:
+    - port: {{ $value.port }}
+      targetPort: {{ $value.targetPort }}
+  selector:
+    io.kompose.service: {{ $value.name }}
+---
+{{- end }}
