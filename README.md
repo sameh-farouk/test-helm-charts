@@ -18,11 +18,13 @@ Install Peertube:
 ## uploading new charts to this Repository (Require Access)
 
 1- you need to install [Chart Releaser](https://github.com/helm/chart-releaser)
+
 2- clone the repo
 ```
 git clone https://github.com/sameh-farouk/test-helm-charts.git
 ```
 3- cd into the `test-helm-charts` directory
+
 4 - create your new app helm chart files inside ./charts/{app_name}/
 
 5 - excute the below commands
@@ -30,6 +32,9 @@ git clone https://github.com/sameh-farouk/test-helm-charts.git
 git checkout main
 helm package charts/{app_name} --destination .deploy  # pacakge the chart
 cr upload -o sameh-farouk -r test-helm-charts -t -t {github-access-token} -p .deploy  # upload the package to github releases
+git add charts/{app_name}
+git commit -m "Adding {app_name} chart"
+git push origin main
 
 git checkout gh-pages
 cr index -i ./index.yaml -o sameh-farouk -r test-helm-charts -t {github-access-token} -c https://sameh-farouk.github.io/test-helm-charts/ -p .deploy
