@@ -10,6 +10,6 @@ Add the Repository to Helm:
 
     helm repo add test-helm-charts https://sameh-farouk.github.io/test-helm-charts/
 
-Install Application 1:
+Install Peertube:
 
-    helm install my-helm-charts/peertube
+    helm install test-helm-charts/peertube
