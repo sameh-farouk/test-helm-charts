@@ -65,6 +65,17 @@ entries:
     version: 0.0.1
   taiga:
   - apiVersion: v1
+    appVersion: 6.4.1
+    created: "2021-09-09T14:30:16.160769805+02:00"
+    description: A Taiga Helm Chart generated for docker-compose from Skippbox Kompose
+    digest: 67555bcd038acdb45ce7cb784ad5bfb0df8ccf38a62735fe375a363229dec1f3
+    keywords:
+    - taiga
+    name: taiga
+    urls:
+    - https://github.com/sameh-farouk/test-helm-charts/releases/download/taiga-0.0.2/taiga-0.0.2.tgz
+    version: 0.0.2
+  - apiVersion: v1
     appVersion: 6.0.6
     created: "2021-09-06T14:17:10.118741231+02:00"
     description: A Taiga Helm Chart generated for docker-compose from Skippbox Kompose
@@ -75,4 +86,4 @@ entries:
     urls:
     - https://github.com/sameh-farouk/test-helm-charts/releases/download/taiga-0.0.1/taiga-0.0.1.tgz
     version: 0.0.1
-generated: "2021-09-06T14:17:10.118748856+02:00"
+generated: "2021-09-09T14:30:16.160813744+02:00"
