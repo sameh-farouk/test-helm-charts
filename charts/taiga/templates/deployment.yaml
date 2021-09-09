@@ -117,7 +117,10 @@ spec:
             - name: TAIGA_SITES_SCHEME
               value: https
             - name: THREEFOLD_API_APP_SECRET
-              value: {{ .Values.threefoldlogin.apiAppSecret }}
+              valueFrom:
+                secretKeyRef:
+                  name: api-app-secret-key
+                  key: secret
             - name: THREEFOLD_URL
               value: {{ .Values.threefoldlogin.apiUrl }}
             - name: THREEFOLD_OPENKYC_URL

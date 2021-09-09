@@ -91,15 +91,10 @@ services:
     port: 8000
     targetPort: 80 
 
-global:
-  ingress:
-    certresolver: default
-
 ingress:
   enabled: true
-  annotations:
-    kubernetes.io/ingress.class: traefik
-    ingress.kubernetes.io/ssl-passthrough: "true"
+  annotations: {}
+    # traefik.ingress.kubernetes.io/router.tls.certresolver: default
   host: "domain" # replaced when installing chart by --set ingress.host=<domain>
   paths:
     - "/"
@@ -114,8 +109,8 @@ resources:
   # choice for the user. This also increases chances charts run on environments with little
   # resources, such as Minikube. If you do want to specify resources, uncomment the following
   # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
-    cpu: 3000
-    memory: 3072
+  #  cpu: 3000
+  #  memory: 3072
 
 autoscaling:
   enabled: false
