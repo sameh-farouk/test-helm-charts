@@ -140,15 +140,15 @@ threefoldVdc:
   backup: ''
 
 emailSettings:
-  emailEnabled: true
-  emailFrom: "samehabouelsaad@gmail.com"
+  emailEnabled: false
+  emailFrom: "user@example.com"
   # You cannot use both (TLS and SSL) at the same time!
-  emailUseTls: true
-  emailUseSsl: false
-  emailSmtpHost: "smtp.gmail.com"
+  emailUseTls: "True"
+  emailUseSsl: "False"
+  emailSmtpHost: "smtp.example.com"
   emailSmtpPort: 587
-  emailSmtpUser: "samehabouelsaad"
-  emailSmtpPassword: ""
+  emailSmtpUser: "user"
+  emailSmtpPassword: "password"
   
 threefoldlogin:
   apiAppSecret : "2W/qhWFeMF6XawIPuEnJ3dWge49bYZNhSsELF64daus="
