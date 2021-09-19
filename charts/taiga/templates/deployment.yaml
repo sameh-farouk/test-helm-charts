@@ -122,22 +122,22 @@ spec:
             - name: EMAIL_BACKEND
               value: "django.core.mail.backends.smtp.EmailBackend"
             - name: DEFAULT_FROM_EMAIL
-              value: {{ .Values.emailSettings.emailFrom }}
+              value: {{ .Values.emailSettings.emailFrom | quote}}
             - name: EMAIL_HOST
-              value: {{ .Values.emailSettings.emailSmtpHost }}
+              value: {{ .Values.emailSettings.emailSmtpHost | quote}}
             - name: EMAIL_PORT
-              value: {{ .Values.emailSettings.emailSmtpPort }}
+              value: {{ .Values.emailSettings.emailSmtpPort | quote}}
             - name: EMAIL_HOST_USER
-              value: {{ .Values.emailSettings.emailSmtpUser }}
+              value: {{ .Values.emailSettings.emailSmtpUser | quote}}
             - name: EMAIL_HOST_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: email-smtp-password
                   key: secret
             - name: EMAIL_USE_TLS
-              value: "{{ .Values.emailSettings.emailUseTls }}"
+              value: {{ .Values.emailSettings.emailUseTls | quote}}
             - name: EMAIL_USE_SSL
-              value: "{{ .Values.emailSettings.emailUseSsl }}"
+              value: {{ .Values.emailSettings.emailUseSsl | quote}}
            {{- end }}
           volumeMounts:
             - mountPath: /taiga-back/static
