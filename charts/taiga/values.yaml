@@ -8,12 +8,18 @@ replicaCount: 1
 images:
   backend:
     repository: threefolddev/taiga-back-threefold
-    tag: latest
+    tag: 6.4.1
     pullPolicy: Always
   frontend:
     repository: threefolddev/taiga-front-threefold
-    tag: latest
+    tag: 6.4.1
     pullPolicy: Always
+  events:
+    repository: taigaio/taiga-events
+    tag: 6.4.0
+  protected:
+    repository: taigaio/taiga-protected
+    tag: 6.4.0
 
 imagePullSecrets: []
 nameOverride: ""
@@ -133,6 +139,17 @@ affinity: {}
 threefoldVdc:
   backup: ''
 
+emailSettings:
+  emailEnabled: true
+  emailFrom: "samehabouelsaad@gmail.com"
+  # You cannot use both (TLS and SSL) at the same time!
+  emailUseTls: true
+  emailUseSsl: false
+  emailSmtpHost: "smtp.gmail.com"
+  emailSmtpPort: 587
+  emailSmtpUser: "samehabouelsaad"
+  emailSmtpPassword: ""
+  
 threefoldlogin:
   apiAppSecret : "2W/qhWFeMF6XawIPuEnJ3dWge49bYZNhSsELF64daus="
   apiAppPublicKey : "K4nQYVJJrcV0Y/6QuqeM3FKPGffdKC5/3HpOa/BmewY="
