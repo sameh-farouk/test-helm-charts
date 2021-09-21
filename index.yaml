@@ -66,6 +66,28 @@ entries:
   taiga:
   - apiVersion: v1
     appVersion: 6.4.1
+    created: "2021-09-21T21:56:43.429547613+02:00"
+    description: A helm chart to deploy taiga with Threefold Auth login plugin
+    digest: 2685cbfb9a7c6cd1860509d68fba2b1786fc906ffc73961173e9a08355c530c9
+    keywords:
+    - taiga
+    name: taiga
+    urls:
+    - https://github.com/sameh-farouk/test-helm-charts/releases/download/taiga-0.0.10/taiga-0.0.10.tgz
+    version: 0.0.10
+  - apiVersion: v1
+    appVersion: 6.4.1
+    created: "2021-09-21T21:56:49.558395112+02:00"
+    description: A helm chart to deploy taiga with Threefold Auth login plugin
+    digest: 06ea5693cf958977c2f3c82d210eeec061e4ff7fd41de08f9c2cc7fe1573895b
+    keywords:
+    - taiga
+    name: taiga
+    urls:
+    - https://github.com/sameh-farouk/test-helm-charts/releases/download/taiga-0.0.9/taiga-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v1
+    appVersion: 6.4.1
     created: "2021-09-19T22:02:07.975544723+02:00"
     description: A helm chart to deploy taiga with Threefold Auth login plugin
     digest: 2660fa54dd4eb712fd33818906e8bb0c5aa0f24a67e9a2c866d5ce9271a811f9
@@ -152,4 +174,4 @@ entries:
     urls:
     - https://github.com/sameh-farouk/test-helm-charts/releases/download/taiga-0.0.1/taiga-0.0.1.tgz
     version: 0.0.1
-generated: "2021-09-19T22:02:07.975675579+02:00"
+generated: "2021-09-21T21:56:49.558671947+02:00"
